@@ -13,8 +13,8 @@ spring4.0
 ### ddd検証
 
 * トランザクション等細かい処理は簡略しています。
-* er図は下記を参照
+* RDS,DynamoDBのer図は下記を参照
 
-![RDS ER図](readmeFile/rds_er.png)
+![RDS ER図](readmeFile/rds_er.png, "RDS_ER図")
 
-![DynamoDB ER図](readmeFile/dynamodb_er.png)
+![DynamoDB ER図](readmeFile/dynamodb_er.png, "DynamoDB_ER図")
