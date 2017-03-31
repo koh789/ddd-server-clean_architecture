@@ -2,8 +2,8 @@ package jp.ddd.server.adapter.web.controller.api;
 
 import jp.ddd.server.adapter.web.controller.BaseApi;
 import jp.ddd.server.adapter.web.controller.input.room.RoomForm;
-import jp.ddd.server.adapter.web.presenter.api.output.ResultJson;
-import jp.ddd.server.adapter.web.presenter.api.output.room.RegisteredRoomJson;
+import jp.ddd.server.adapter.web.presenter.output.ResultJson;
+import jp.ddd.server.adapter.web.presenter.output.room.RegisteredRoomJson;
 import jp.ddd.server.domain.entity.user.core.UserId;
 import jp.ddd.server.other.utils.Cookies;
 import jp.ddd.server.other.utils.DsLists;
@@ -36,24 +36,4 @@ public class RoomController extends BaseApi {
           roomUseCase.register(Cookies.getKey(req), roomForm.getRoomName(), joinUserIds));
     }
 
-//    @RequestMapping(value = "", method = RequestMethod.GET)
-//    public ResultJson<RegisteredRoomJson> register(HttpServletRequest req, @RequestParam("room_id") Integer roomId) {
-//
-//        //TODO 未実装
-//        return new ResultJson<>(null);
-//    }
-
-    //    @RequestMapping(value = "/{roomId}", method = RequestMethod.PUT)
-    //    public ResultJson<String> add(HttpServletRequest req, @PathVariable("roomId") Integer roomId,
-    //      @RequestBody @Validated UpdateRoomForm form) {
-    //
-    //        val loginUserId = SessionUser.getOpt(sessionUserRepository, Cookies.getKey(req)) //
-    //          .map(su -> su.getUserId()).orElseThrow(() -> new AuthException());
-    //
-    //        val results = RoomRds //
-    //          .addRoomUser(roomId, DsLists.toImt(form.getUserIds()), roomUserRepository)
-    //          .collect(ru -> RegisteredRoomUserJson.create(ru.getUserId(), ru.getUserId(), ru.getJoinDt()));
-    //
-    //        return ResultJson.create(results);
-    //    }
 }

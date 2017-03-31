@@ -2,8 +2,8 @@ package jp.ddd.server.adapter.web.controller.api;
 
 import jp.ddd.server.adapter.web.controller.BaseApi;
 import jp.ddd.server.adapter.web.controller.input.message.MessageForm;
-import jp.ddd.server.adapter.web.presenter.api.output.ResultJson;
-import jp.ddd.server.adapter.web.presenter.api.output.message.RegisteredMessageJson;
+import jp.ddd.server.adapter.web.presenter.output.ResultJson;
+import jp.ddd.server.adapter.web.presenter.output.message.RegisteredMessageJson;
 import jp.ddd.server.other.exception.AccessPermissonException;
 import jp.ddd.server.other.exception.AuthException;
 import jp.ddd.server.other.utils.Cookies;
@@ -48,16 +48,4 @@ public class MessageController extends BaseApi {
         }
         return messagePresenter.toRegisteredJson(messageUseCase.register(roomId, form.getUserId(), form.getContent()));
     }
-
-    //    //
-    //    @RequestMapping(value = "", method = RequestMethod.GET)
-    //    public ResultJson<ImmutableList<MessagesJson>> get(HttpServletRequest req, @PathVariable("roomId") Integer roomId,
-    //      @RequestParam(value = "p", defaultValue = "1") int pageNum) {
-    //        val user = SessionUser.getOpt(sessionUserRedisGateway, Cookies.getKey(req))
-    //          .orElseThrow(() -> new AuthException());
-    //
-    //        val dtos = messageService.find(roomId, user.getUserId(), Page.create(pageNum, 50));
-    //
-    //        return ResultJson.create(dtos.collect(dto -> MessagesJson.create(dto)));
-    //    }
 }

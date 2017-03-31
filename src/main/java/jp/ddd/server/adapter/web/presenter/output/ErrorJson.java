@@ -1,7 +1,9 @@
-package jp.ddd.server.adapter.web.presenter.api.output;
+package jp.ddd.server.adapter.web.presenter.output;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
+import java.lang.*;
 
 /**
  * Created by noguchi_kohei 
