@@ -1,4 +1,4 @@
-package jp.ddd.server.usecase.repository.impl;
+package jp.ddd.server.usecase.aggregate;
 
 import jp.ddd.server.adapter.gateway.dynamodb.table.MessageDyn;
 import jp.ddd.server.domain.entity.message.Message;

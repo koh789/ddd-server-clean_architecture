@@ -1,4 +1,4 @@
-package jp.ddd.server.usecase.repository.impl;
+package jp.ddd.server.usecase.aggregate;
 
 import jp.ddd.server.adapter.gateway.dynamodb.table.UserDyn;
 import jp.ddd.server.adapter.gateway.redis.entity.SessionUser;
